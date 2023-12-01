@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,13 +29,66 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit( props) {
+
+	const {
+		attributes: { LocationName, Address, YearStart, YearEnd, Overview },
+		setAttributes,
+		className,
+	} = props;
+
+	const blockProps = useBlockProps();
+
+	const onChangeLocation = ( newLocationName ) => {
+		setAttributes( { LocationName: newLocationName } );
+	};
+	const onChangeAddress = ( newAddress ) => {
+		setAttributes( { Address: newAddress } );
+	};
+	const onChangeYearStart = ( newYearStart ) => {
+		setAttributes( { YearStart: newYearStart } );
+	};
+	const onChangeYearEnd = ( newYearEnd ) => {
+		setAttributes( { YearEnd: newYearEnd } );
+	};
+	const onChangeOverview = ( newOverview ) => {
+		setAttributes( { Overview: newOverview } );
+	};
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Location-block – hello from the editor!',
-				'location-block'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<div>
+				<RichText 
+					{...blockProps}
+					tagName='p'
+					onChange={onChangeLocation}
+					value={LocationName}
+				/>
+				<RichText
+					{...blockProps}
+					tagName='p'
+					onChange={onChangeAddress}
+					value={Address}
+				/>
+				<RichText
+					{...blockProps}
+					tagName='p'
+					onChange={onChangeYearStart}
+					value={YearStart}
+				/>
+				<RichText
+					{...blockProps}
+					tagName='p'
+					onChange={onChangeYearEnd}
+					value={YearEnd}
+				/>
+				<RichText
+					{...blockProps}
+					tagName='p'
+					onChange={onChangeOverview}
+					value={Overview}
+				/>
+			</div>
+		</div>
 	);
 }

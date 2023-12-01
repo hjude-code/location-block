@@ -7,22 +7,23 @@
   "category": "widgets",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false
+    "html": false,
+    "defaultStylePicker": true
   },
   "attributes": {
-    "Location-Name": {
+    "LocationName": {
       "type": "string",
       "default": "Location Name"
     },
-    "Adress": {
+    "Address": {
       "type": "string",
-      "default": "Adress"
+      "default": "Address"
     },
-    "Year-Start": {
+    "YearStart": {
       "type": "string",
       "default": "1998"
     },
-    "Year-End": {
+    "YearEnd": {
       "type": "string",
       "default": "current"
     },

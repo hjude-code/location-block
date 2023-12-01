@@ -51,10 +51,72 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {WPElement} Element to render.
  */
-function Edit() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+function Edit(props) {
+  const {
+    attributes: {
+      LocationName,
+      Address,
+      YearStart,
+      YearEnd,
+      Overview
+    },
+    setAttributes,
+    className
+  } = props;
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+  const onChangeLocation = newLocationName => {
+    setAttributes({
+      LocationName: newLocationName
+    });
+  };
+  const onChangeAddress = newAddress => {
+    setAttributes({
+      Address: newAddress
+    });
+  };
+  const onChangeYearStart = newYearStart => {
+    setAttributes({
+      YearStart: newYearStart
+    });
+  };
+  const onChangeYearEnd = newYearEnd => {
+    setAttributes({
+      YearEnd: newYearEnd
+    });
+  };
+  const onChangeOverview = newOverview => {
+    setAttributes({
+      Overview: newOverview
+    });
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Location-block – hello from the editor!', 'location-block'));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    ...blockProps,
+    tagName: "p",
+    onChange: onChangeLocation,
+    value: LocationName
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    ...blockProps,
+    tagName: "p",
+    onChange: onChangeAddress,
+    value: Address
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    ...blockProps,
+    tagName: "p",
+    onChange: onChangeYearStart,
+    value: YearStart
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    ...blockProps,
+    tagName: "p",
+    onChange: onChangeYearEnd,
+    value: YearEnd
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    ...blockProps,
+    tagName: "p",
+    onChange: onChangeOverview,
+    value: Overview
+  })));
 }
 
 /***/ }),
@@ -177,7 +239,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"location-block/location-block","version":"0.1.0","title":"Location-block","category":"widgets","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"Location-Name":{"type":"string","default":"Location Name"},"Adress":{"type":"string","default":"Adress"},"Year-Start":{"type":"string","default":"1998"},"Year-End":{"type":"string","default":"current"},"Overview":{"type":"string","default":"its a long story"}},"textdomain":"location-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"location-block/location-block","version":"0.1.0","title":"Location-block","category":"widgets","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"defaultStylePicker":true},"attributes":{"LocationName":{"type":"string","default":"Location Name"},"Address":{"type":"string","default":"Address"},"YearStart":{"type":"string","default":"1998"},"YearEnd":{"type":"string","default":"current"},"Overview":{"type":"string","default":"its a long story"}},"textdomain":"location-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
