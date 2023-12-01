@@ -8,9 +8,8 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-location-block-location-block {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+  border: 1px solid var(--wp--preset--color--contrast);
+  padding: var(--wp--preset--spacing--20);
 }
 
 /*# sourceMappingURL=style-index.css.map*/

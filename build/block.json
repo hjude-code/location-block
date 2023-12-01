@@ -7,8 +7,7 @@
   "category": "widgets",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false,
-    "defaultStylePicker": true
+    "html": false
   },
   "attributes": {
     "LocationName": {

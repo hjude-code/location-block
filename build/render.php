@@ -4,5 +4,9 @@
  */
 ?>
 <p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Location-block – hello from a dynamic block!', 'location-block' ); ?>
+	<?php echo($attributes['LocationName']) ?><br>	
+	<?php echo($attributes['Address']) ?><br>	
+	<?php echo($attributes['YearStart']) ?><br>	
+	<?php echo($attributes['YearEnd']) ?><br>	
+	<?php echo($attributes['Overview']) ?>
 </p>
