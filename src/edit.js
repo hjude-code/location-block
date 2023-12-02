@@ -56,39 +56,49 @@ export default function Edit( props) {
 	};
 
 	return (
-		<div { ...useBlockProps() }>
-			<div>
-				<RichText 
-					{...blockProps}
-					tagName='p'
-					onChange={onChangeLocation}
-					value={LocationName}
-				/>
-				<RichText
+		<div>
+			<div { ...useBlockProps() }>
+				<div class="LocationPannel">
+					<RichText
+						{...blockProps}
+						tagName='p'
+						onChange={onChangeYearStart}
+						value={YearStart}
+					/>
+					<RichText
+						{...blockProps}
+						tagName='p'
+						onChange={onChangeYearEnd}
+						value={YearEnd}
+					/>
+				</div>
+				<div class="LocationName">
+					<RichText 
+						{...blockProps}
+						tagName='p'
+						onChange={onChangeLocation}
+						value={LocationName}
+					/>
+					<RichText
 					{...blockProps}
 					tagName='p'
 					onChange={onChangeAddress}
 					value={Address}
-				/>
-				<RichText
-					{...blockProps}
-					tagName='p'
-					onChange={onChangeYearStart}
-					value={YearStart}
-				/>
-				<RichText
-					{...blockProps}
-					tagName='p'
-					onChange={onChangeYearEnd}
-					value={YearEnd}
-				/>
-				<RichText
-					{...blockProps}
-					tagName='p'
-					onChange={onChangeOverview}
-					value={Overview}
-				/>
-				<InnerBlocks/>
+					/>
+				</div>
+				<div class="Positions">
+					<InnerBlocks/>
+				</div>
+				<div class="Overview">
+					<RichText
+						{...blockProps}
+						tagName='p'
+						onChange={onChangeOverview}
+						value={Overview}
+					/>
+				</div>
+				
+				
 			</div>
 		</div>
 	);

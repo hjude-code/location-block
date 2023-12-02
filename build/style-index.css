@@ -8,8 +8,25 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-location-block-location-block {
+  display: grid;
+  grid-template-columns: 1fr 3fr 4fr;
+}
+
+.wp-block-location-block-location-block > div {
   border: 1px solid var(--wp--preset--color--contrast);
   padding: var(--wp--preset--spacing--20);
+}
+
+.LocationPannel {
+  grid-area: 1/1/span 2/span 1;
+}
+
+.Positions {
+  padding: 0px !important;
+}
+
+.Overview {
+  grid-area: 2/2/span 1/span 2;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
