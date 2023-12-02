@@ -116,7 +116,7 @@ function Edit(props) {
     tagName: "p",
     onChange: onChangeOverview,
     value: Overview
-  })));
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null)));
 }
 
 /***/ }),
