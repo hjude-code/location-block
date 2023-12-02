@@ -75,7 +75,7 @@ export default function Edit( props) {
 				<div class="LocationName">
 					<RichText 
 						{...blockProps}
-						tagName='p'
+						tagName='h3'
 						onChange={onChangeLocation}
 						value={LocationName}
 					/>

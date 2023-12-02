@@ -9,7 +9,7 @@
 		<p><?php echo($attributes['YearEnd']) ?></p>
 	</div>
 	<div class="LocationName">
-		<p><?php echo($attributes['LocationName']) ?></p>
+		<h3><?php echo($attributes['LocationName']) ?></h3>
 		<p><?php echo($attributes['Address']) ?></p>
 	</div>
 	<div class="Positions">

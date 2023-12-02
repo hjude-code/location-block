@@ -107,7 +107,7 @@ function Edit(props) {
     class: "LocationName"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     ...blockProps,
-    tagName: "p",
+    tagName: "h3",
     onChange: onChangeLocation,
     value: LocationName
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
