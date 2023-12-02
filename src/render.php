@@ -3,10 +3,19 @@
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php echo($attributes['LocationName']) ?><br>	
-	<?php echo($attributes['Address']) ?><br>	
-	<?php echo($attributes['YearStart']) ?><br>	
-	<?php echo($attributes['YearEnd']) ?><br>	
-	<?php echo($attributes['Overview']) ?>
-</p>
+<div <?php echo get_block_wrapper_attributes(); ?>>
+	<div class="LocationPannel">
+		<p><?php echo($attributes['YearStart']) ?></p>
+		<p><?php echo($attributes['YearEnd']) ?></p>
+	</div>
+	<div class="LocationName">
+		<p><?php echo($attributes['LocationName']) ?></p>
+		<p><?php echo($attributes['Address']) ?></p>
+	</div>
+	<div class="Positions">
+		<?php echo $content ?>
+	</div>
+	<div class="Overview">
+		<?php echo($attributes['Overview']) ?>
+	</div>
+</div>
