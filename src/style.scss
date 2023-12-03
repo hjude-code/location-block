@@ -28,6 +28,7 @@ div.wp-block-location-block-location-block {
 	background-color:rgba($color: #000000, $alpha: 0.75);
 	color:var(--wp--preset--color--base);
 	background-blend-mode: multiply;
+	background-attachment: fixed;
 }
 
 .LocationPannel span.vr{
@@ -55,6 +56,7 @@ div.wp-block-location-block-location-block {
 	height: 100%;
 	flex-grow: 1;
 	min-height: 100px;
+	background-attachment: fixed;
 }
 .Overview{
 	grid-area: 2/ 2 / span 1 / span 2;
