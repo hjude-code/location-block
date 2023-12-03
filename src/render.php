@@ -6,6 +6,7 @@
 <div <?php echo get_block_wrapper_attributes(); ?>>
 	<div class="LocationPannel">
 		<p><?php echo($attributes['YearStart']) ?></p>
+		<span class="vr"></span>
 		<p><?php echo($attributes['YearEnd']) ?></p>
 	</div>
 	<div class="LocationName">

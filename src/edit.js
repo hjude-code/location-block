@@ -65,6 +65,7 @@ export default function Edit( props) {
 						onChange={onChangeYearStart}
 						value={YearStart}
 					/>
+					<span class="vr"></span>
 					<RichText
 						{...blockProps}
 						tagName='p'
