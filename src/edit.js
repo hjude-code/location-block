@@ -32,7 +32,7 @@ import './editor.scss';
 export default function Edit( props) {
 
 	const {
-		attributes: { LocationName, Address, YearStart, YearEnd, Overview },
+		attributes: { LocationName, Address, YearStart, YearEnd, Overview, MapURL },
 		setAttributes,
 		className,
 	} = props;
@@ -55,10 +55,14 @@ export default function Edit( props) {
 		setAttributes( { Overview: newOverview } );
 	};
 
+	const MapStyle = {
+		backgroundImage: `url(${MapURL})`
+	  };
+
 	return (
 		<div>
 			<div { ...useBlockProps() }>
-				<div class="LocationPannel">
+				<div class="LocationPannel" style={MapStyle} >
 					<RichText
 						{...blockProps}
 						tagName='p'
@@ -89,6 +93,7 @@ export default function Edit( props) {
 				</div>
 				<div class="Positions">
 					<InnerBlocks/>
+					<div class="LocationMap" style={MapStyle}></div>
 				</div>
 				<div class="Overview">
 					<RichText

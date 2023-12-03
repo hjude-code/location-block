@@ -58,7 +58,8 @@ function Edit(props) {
       Address,
       YearStart,
       YearEnd,
-      Overview
+      Overview,
+      MapURL
     },
     setAttributes,
     className
@@ -89,10 +90,14 @@ function Edit(props) {
       Overview: newOverview
     });
   };
+  const MapStyle = {
+    backgroundImage: `url(${MapURL})`
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    class: "LocationPannel"
+    class: "LocationPannel",
+    style: MapStyle
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     ...blockProps,
     tagName: "p",
@@ -119,7 +124,10 @@ function Edit(props) {
     value: Address
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     class: "Positions"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "LocationMap",
+    style: MapStyle
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     class: "Overview"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     ...blockProps,
