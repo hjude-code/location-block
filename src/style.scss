@@ -25,9 +25,11 @@ div.wp-block-location-block-location-block {
 	-webkit-flex-direction:column;
 	justify-content: space-between;
 	-webkit-justify-content:space-between;
-	background-color: var(--wp--preset--color--contrast);
+	background-color:rgba($color: #000000, $alpha: 0.75);
 	color:var(--wp--preset--color--base);
+	background-blend-mode: multiply;
 }
+
 .LocationPannel span.vr{
 	display: block;
 	flex-grow: 1;
@@ -37,6 +39,22 @@ div.wp-block-location-block-location-block {
 }
 .Positions{
 	padding: 0px !important;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction:column;
+}
+.Positions>*{
+	flex-grow: 0;
+	height: 100%;
+	margin: 0;
+}
+.Positions>div.LocationMap{
+	background-color: var(--wp--preset--color--accent);
+	width: 100%;
+	height: 100%;
+	flex-grow: 1;
+	min-height: 100px;
 }
 .Overview{
 	grid-area: 2/ 2 / span 1 / span 2;

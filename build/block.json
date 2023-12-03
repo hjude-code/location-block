@@ -29,6 +29,10 @@
     "Overview": {
       "type": "string",
       "default": "its a long story"
+    },
+    "MapURL": {
+      "type": "string",
+      "default": "http://hjude-portfolio23.local/wp-content/uploads/2023/12/Map_Adweek.png"
     }
   },
   "textdomain": "location-block",

@@ -274,7 +274,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"location-block/location-block","version":"0.1.0","title":"Location-block","category":"widgets","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"LocationName":{"type":"string","default":"Location Name"},"Address":{"type":"string","default":"Address"},"YearStart":{"type":"string","default":"1998"},"YearEnd":{"type":"string","default":"current"},"Overview":{"type":"string","default":"its a long story"}},"textdomain":"location-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"location-block/location-block","version":"0.1.0","title":"Location-block","category":"widgets","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"LocationName":{"type":"string","default":"Location Name"},"Address":{"type":"string","default":"Address"},"YearStart":{"type":"string","default":"1998"},"YearEnd":{"type":"string","default":"current"},"Overview":{"type":"string","default":"its a long story"},"MapURL":{"type":"string","default":"http://hjude-portfolio23.local/wp-content/uploads/2023/12/Map_Adweek.png"}},"textdomain":"location-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
