@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText, InnerBlocks} from '@wordpress/block-editor';
+import { useBlockProps, RichText, InnerBlocks, InspectorControls} from '@wordpress/block-editor';
+import { Panel, PanelBody, PanelRow, TextControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -54,6 +55,9 @@ export default function Edit( props) {
 	const onChangeOverview = ( newOverview ) => {
 		setAttributes( { Overview: newOverview } );
 	};
+	const onChangeMapURL = ( newMapURL ) => {
+		setAttributes( { MapURL: newMapURL } );
+	};
 
 	const MapStyle = {
 		backgroundImage: `url(${MapURL})`
@@ -61,6 +65,16 @@ export default function Edit( props) {
 
 	return (
 		<div>
+			<InspectorControls>
+				<PanelBody title={ __( 'Settings') }>
+					<PanelRow>
+						<TextControl
+						label="test"
+						onChange={onChangeMapURL}
+						/>
+					</PanelRow>
+				</PanelBody>
+			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<div class="LocationPannel" style={MapStyle} >
 					<RichText
