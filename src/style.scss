@@ -38,6 +38,17 @@ div.wp-block-location-block-location-block {
 	height: 100%;
 	background-color: var(--wp--preset--color--base);
 }
+.LocationName{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction:column;
+	justify-content: space-between;
+	-webkit-justify-content:space-between;
+}
+.LocationName *{
+	margin: 0;
+}
 .Positions{
 	padding: 0px !important;
 	display: flex;
@@ -60,6 +71,12 @@ div.wp-block-location-block-location-block {
 }
 .Overview{
 	grid-area: 2/ 2 / span 1 / span 2;
+}
+
+@media  screen and (min-width: 768px) {
+	.LocationPannel :where(h3, h4){
+		display: none;
+	}
 }
 
 @media screen and (max-width: 768px){
