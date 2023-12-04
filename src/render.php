@@ -8,8 +8,10 @@ $MapURL = "style=background-image:url('" . $attributes['MapURL'] . "')"
 ?>
 <div <?php echo get_block_wrapper_attributes(); ?>>
 	<div class="LocationPannel" <?php echo $MapURL ?> >
+		<h4><?php echo($attributes['Address']) ?></h4>
+		<h3><?php echo($attributes['LocationName']) ?></h3>
 		<p><?php echo($attributes['YearStart']) ?></p>
-		<span class="vr"></span>
+		<span class="rule"></span>
 		<p><?php echo($attributes['YearEnd']) ?></p>
 	</div>
 	<div class="LocationName">

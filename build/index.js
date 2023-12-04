@@ -117,7 +117,7 @@ function Edit(props) {
     onChange: onChangeYearStart,
     value: YearStart
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    class: "vr"
+    class: "rule"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     ...blockProps,
     tagName: "p",
