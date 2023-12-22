@@ -114,7 +114,7 @@ div.wp-block-location-block-location-block {
 		display: grid;
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto auto auto;
-		grid-gap: 1rem;
+		// grid-gap: 1rem;
 	}
 	.LocationPannel :is(h3, h4, p){
 		color: var(--wp--preset--color--base) !important;
