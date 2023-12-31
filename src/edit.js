@@ -69,8 +69,9 @@ export default function Edit( props) {
 				<PanelBody title={ __( 'Settings') }>
 					<PanelRow>
 						<TextControl
-						label="test"
+						label="Map Url"
 						onChange={onChangeMapURL}
+						value={MapURL}
 						/>
 					</PanelRow>
 				</PanelBody>
