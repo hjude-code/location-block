@@ -7,7 +7,11 @@
   "category": "widgets",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "text": true,
+      "background": false
+    }
   },
   "attributes": {
     "LocationName": {
@@ -33,6 +37,14 @@
     "MapURL": {
       "type": "string",
       "default": "http://hjude-portfolio23.local/wp-content/uploads/2023/12/Map_Adweek.png"
+    },
+    "AccentColor": {
+      "type": "string",
+      "default": "var(--wp--preset--color--accent)"
+    },
+    "AccentTextColor": {
+      "type": "string",
+      "default": "var(--wp--preset--color--base)"
     }
   },
   "textdomain": "location-block",

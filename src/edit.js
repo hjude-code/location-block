@@ -12,7 +12,8 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, RichText, InnerBlocks, InspectorControls} from '@wordpress/block-editor';
-import { Panel, PanelBody, PanelRow, TextControl } from '@wordpress/components';
+import { Panel, PanelBody, PanelRow, TextControl, ColorPalette } from '@wordpress/components';
+import { useSelect } from '@wordpress/data';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -32,8 +33,11 @@ import './editor.scss';
  */
 export default function Edit( props) {
 
+	
+
+
 	const {
-		attributes: { LocationName, Address, YearStart, YearEnd, Overview, MapURL },
+		attributes: { LocationName, Address, YearStart, YearEnd, Overview, MapURL, AccentColor, AccentTextColor },
 		setAttributes,
 		className,
 	} = props;
@@ -58,10 +62,18 @@ export default function Edit( props) {
 	const onChangeMapURL = ( newMapURL ) => {
 		setAttributes( { MapURL: newMapURL } );
 	};
+	const onChangeAccentColor = ( newAccentColor ) => {
+		setAttributes( { AccentColor: newAccentColor } );
+	};
+	const onChangeAccentTextColor = ( newAccentTextColor ) => {
+		setAttributes( { AccentTextColor: newAccentTextColor } );
+	};
 
 	const MapStyle = {
 		backgroundImage: `url(${MapURL})`
 	  };
+
+	const colors = useSelect('core/block-editor').getSettings().colors;
 
 	return (
 		<div>
@@ -72,6 +84,22 @@ export default function Edit( props) {
 						label="Map Url"
 						onChange={onChangeMapURL}
 						value={MapURL}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ColorPalette
+							label="Map Color"
+							colors={colors}
+							value={AccentColor}
+							onChange={onChangeAccentColor}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ColorPalette
+							label="Map Text Color"
+							colors={colors}
+							value={AccentTextColor}
+							onChange={onChangeAccentTextColor}
 						/>
 					</PanelRow>
 				</PanelBody>
