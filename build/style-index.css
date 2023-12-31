@@ -28,20 +28,27 @@ div.wp-block-location-block-location-block {
   position: relative;
 }
 
+.LocationPannel p {
+  font-weight: bold;
+}
+
 .LocationPannel > * {
   position: relative;
   z-index: 2;
 }
 
-.LocationPannel::before {
+.LocationPannel::before,
+.Positions > div.LocationMap::before {
   content: "";
   display: block;
   position: absolute;
-  background-color: var(--wp--preset--color--contrast);
+  background-color: var(--wp--preset--color--accent);
   inset: 0px;
   opacity: 0.75;
   z-index: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: color;
+  -webkit-backdrop-filter: saturate(0) contrast(300%) brightness(25%);
+          backdrop-filter: saturate(0) contrast(300%) brightness(25%);
 }
 
 .LocationPannel span.rule {
@@ -79,7 +86,7 @@ div.wp-block-location-block-location-block {
 }
 
 .Positions > div.LocationMap {
-  background-color: var(--wp--preset--color--accent);
+  position: relative;
   width: 100%;
   height: 100%;
   flex-grow: 1;
